@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: Cloister Black, sans-serif; /* Добавил резервный шрифт */
+    margin: 0;
+    padding: 0;
+    background-color: #1C1C1C;
+    color: #FFF;
+    overflow-x: hidden; /* Предотвращает горизонтальную прокрутку на мобильных устройствах */
+}
+
+header {
+    background-color: #000;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Добавил тень */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFF;
+    transition: color 0.3s ease;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 50px;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: filter 0.5s ease, transform 0.5s ease; /* Добавил анимацию для transform */
+}
+
+.banner img:hover {
+    filter: invert(100%);
+    transform: scale(1.05); /* Увеличивает изображение при наведении */
+}
+
+#intro-text {
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+}
+
+/* Content Section */
+.content {
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Добавил тень */
+}
+
+.content h2 {
+    color: #FF4500;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 20px;
+    font-size: 100%;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Добавил тень */
+}
+
+footer img {
+    max-width: 7%;
+    height: auto;
+    margin-top: 20px;
+    transition: filter 0.5s ease, transform 0.5s ease; /* Добавил анимацию для transform */
+    filter: invert(100%);
+}
+
+footer img:hover {
+ 
+    transform: rotate(360deg); /* Поворачивает изображение при наведении */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 200%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .banner {
+        padding: 30px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content h2 {
+        font-size: 250%;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+/* Hover Effect for Navigation Links */
+nav ul li a:hover {
+    color: #FF4500;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*------------------------------------------------ Artist Styles */
+/* Artist Styles */
+.artist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.artist-info {
+    text-align: center;
+}
+
+.artist-info img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #FF4500;
+    margin-bottom: 10px;
+    transition: filter 0.5s ease, transform 0.5s ease; /* Добавил анимацию для transform */
+}
+
+.artist-info img:hover {
+    filter: invert(100%);
+    transform: scale(1.1); /* Увеличивает изображение при наведении */
+}
+
+.artist-info h3 {
+    font-family: Cloister Black;
+    font-size: 24px;
+    margin: 0;
+    color: #FF4500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавил тень для текста */
+}
+
+.artist-description {
+    max-width: 400px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .artist {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Fade-in Animation for All Elements */
+body * {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Fade-in Animation for Text Elements */
+h2, h3, p {
+    animation: fadeInText 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
