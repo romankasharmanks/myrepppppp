@@ -25,7 +25,7 @@ function play() {
     var logoTitleContainer = document.getElementById('other-text');
     var index = 0;
 
-    logoTitleContainer.style.fontSize = '150%';
+    logoTitleContainer.style.fontSize = '45px';
  
     function generateRandomTitle() {
         var logoRandom = logoTitle.substring(0, index);
