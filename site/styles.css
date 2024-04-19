@@ -1,3 +1,5 @@
+
+
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif; /* Заменил шрифт Arial на Roboto */
@@ -8,13 +10,11 @@ body {
     color: #FFF;
     overflow-x: hidden; /* Предотвращает горизонтальную прокрутку на мобильных устройствах */
 }
-
 header {
     background-color: #000;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Добавил тень */
 }
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -74,7 +74,7 @@ footer {
 }
 
 footer img {
-    max-width:100px ;
+    max-width:5% ;
     height: auto;
     margin-top: 20px;
     transition: filter 0.5s ease, transform 0.5s ease; /* Добавил анимацию для transform */
@@ -169,7 +169,7 @@ nav ul li a:hover {
 }
 
 .artist-description {
-    max-width: 400px;
+    max-width: 80%;
     text-align: center;
     font-size: 18px;
     line-height: 1.5;
@@ -215,7 +215,7 @@ h2, h3, p {
 }
 
 .album img {
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
     border-radius: 5px;
     margin-top: 20px;
@@ -244,3 +244,19 @@ h2, h3, p {
     font-size: 18px;
     line-height: 1.5;
 }
+
+/* Объекты */
+.object {
+    width: 200px;
+    height: 200px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Тень: горизонтальное смещение, вертикальное смещение, размытие, цвет */
+}
+
+.object:hover {
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Увеличиваем размытие и смещение тени при наведении */
+}
+
+
+
